@@ -6,7 +6,8 @@
  }
  #date{
     margin-left: auto;
-    color: white;
+    
+    padding: 5px;
  }
  .borderw{
     max-width: 600px;
@@ -64,10 +65,21 @@
 
   :host::ng-deep .useroverlay:hover{
      background-color: black;
+
+  }
+  :host::ng-deep .ui-overlaypanel .ui-overlaypanel-content{
+    padding: 0px !important;
   }
 
   .log-out:hover{
      background-color: lightslategray;
+  }
+
+  .log-out{
+    padding: 6px 6px;
+     width: 130px;
+      cursor: pointer;
+       border: 1px solid;
   }
 
   .nav-link .dropdown-item{
@@ -157,8 +169,23 @@
    background-color: #555 /* Light Black */
  }
 
+ .dropdown-menu{
+   background-color: black;
+   margin: 10px;
+   
+ }
+ .dropdown-menu a{
+  color: white;
+  border: 1px solid;
+ }
+
  .dropdown-item:hover{
-   color: transparent;
+  /* color: black; */
+  background-color: grey;
+ }
+
+ #navbardrop{
+  margin-left: 20px;
  }
  
 

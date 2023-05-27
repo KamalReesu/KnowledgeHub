@@ -1,26 +1,39 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" style="background-color:#6a4689 !important;">
-      <a class="navbar-brand" href="#">Knowledge H<i class="material-icons bub">wb_incandescent</i>b </a>
-      <!-- <ul class="navbar-nav">
+      <a class="navbar-brand" href="#">Knowledge H<i class="material-icons bub">wb_incandescent</i>b </a>&nbsp;&nbsp;
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">ABOUTUS</a>
+        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
-            Front End
-          </a>
-          <div class="dropdown-menu" style="background-color: wheat;">
-            <a class="dropdown-item" href="#" style="border-bottom: 1px solid;">HTML</a>
-            <a class="dropdown-item" href="#" style="border-bottom: 1px solid;">CSS</a>
-            <a class="dropdown-item" href="#">JAVA SCRIPT</a>
+          <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">FRONTEND</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#" >HTML</a>
+            <a class="dropdown-item" href="#" >CSS</a>
+            <a class="dropdown-item" href="#" >BOOTSTRAP</a>
+            <a class="dropdown-item" href="#" >ANGULAR</a>
+            <a class="dropdown-item" href="#" >JAVASCRIPT</a>
+            <a class="dropdown-item" href="#">JQuery</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">ANGULAR</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">BACKEND</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#" >ASP.NET CORE</a>
+            <a class="dropdown-item" href="#" >ASP .NET MVC</a>
+            <a class="dropdown-item" href="#">EF CORE</a>
+          </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">C#</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">MS SQLSERVER</a>
-        </li>
-      </ul> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">
+          DATABASES
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#" >MS SQL SERVER</a>
+            <a class="dropdown-item" href="#" >MY SQL</a>
+            <a class="dropdown-item" href="#">MONGO DB</a>
+          </div>
+        </li> 
+      </ul>
     <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item">
@@ -42,7 +55,7 @@
       <span style='font-size:100px; color: white;background-color: blue;'>&#914;</span>
     </div> -->
       <div *ngIf="showprofile" style="margin-left: auto; display: flex; align-items: center;">
-        <span  style="margin-right: 15px; font-weight: 800; color: white;"> Welcome, {{title}}</span>
+        <span  style="margin-right: 15px; font-weight: 800; color: white;"> Welcome {{title}}</span>
         <i (click)="op2.toggle($event)" class="material-icons" style="font-size:36px; color: white; margin-right: 15px; cursor: pointer;">account_circle</i>
         <a  class="notification">
           <i class="material-icons" style="color: white; margin-right: 20px;">notifications_none</i>
@@ -57,14 +70,15 @@
   
   <p-overlayPanel #op2 appendTo="body" [autoZIndex]="false" [style]="{'z-index':'1024'}" [styleClass]="useroverlay">
         <div style="display: grid;">
-        <span class="log-out" style="border-bottom: 2px solid black; padding: 6px 6px; width: 100px; cursor: pointer;" (click)="onProfile()">My Account</span>
-        <span class="log-out" style="padding: 6px 6px; display: flex; cursor: pointer;" (click)="onLogout(); op2.hide(); "><i class="material-icons ">exit_to_app</i>Log Out</span>
+        <span class="log-out" (click)="onProfile()">My Profile</span>
+        <span class="log-out">My Subscriptions</span>
+        <span class="log-out" style="display: flex;" (click)="onLogout(); op2.hide(); "><i class="material-icons ">exit_to_app</i>Log Out</span>
     </div>
     
   </p-overlayPanel>
-  <!-- <nav class="navbar navbar-expand-lg  navbar-dark  fixed-bottom">
-    <p style="color: white;" >Follow us on <a href="https://www.facebook.com" target="_blank" style="color: aqua;">Facebook</a> or <a style="color: aqua;" href="https://www.covidvisualizer.com" target="_blank">Twitter</a></p>
-    <p id="date" style="color: white;"> {{ tdate | date:'medium'}}</p>
-  </nav> -->
+  <nav class="navbar navbar-expand-lg  fixed-bottom">
+    <p style="margin-left: 15px; color: white; font-size: 15px !important; color: inherit;">Crafted & Powered by <a style="cursor: pointer;" (click)="topFunction()">Mad M<i class="material-icons bub">wb_incandescent</i>nds</a></p>
+    <p id="date"> {{ tdate | date:'medium'}}</p>
+  </nav>
 
   

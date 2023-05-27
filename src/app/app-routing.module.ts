@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [{ path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
-{path:'Body', component:CustomHeaderComponent},
+{path:'contactus', component:ContactUsComponent},
 {path:'Main',component:ContentComponent,canActivate:[AuthguardGuard]},
 {path:'viewprofile',component:ViewprofileComponent},
 {path: '', redirectTo: 'home', pathMatch:'full'}];

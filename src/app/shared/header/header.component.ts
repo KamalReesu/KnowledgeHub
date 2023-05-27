@@ -15,15 +15,14 @@ export class HeaderComponent implements OnInit,OnChanges {
   title:string;
 
   constructor(private router:Router,private mys:MyserviceService) { 
-    //this.showprofile=this.mys.isAuthenticated;
-   
+    this.showprofile=this.mys.isAuthenticated;
   }
   ngOnChanges(changes: SimpleChanges): void {
-    //this.isuserAuthenticated = this.mys.isAuthenticated;
+      this.isuserAuthenticated = this.mys.isAuthenticated;
   }
 
   ngOnInit() {
-   // setInterval(()=>{this.tdate=new Date()},550);  
+   setInterval(()=>{this.tdate=new Date()},550);  
     this.mys.isloggedin.subscribe( e => { this.showprofile=e ,this.title=sessionStorage.getItem('Username')});
    
   }

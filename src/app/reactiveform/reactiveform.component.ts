@@ -51,7 +51,14 @@ export class ReactiveformComponent implements OnInit {
   }
 
   onLogin($event){
-    this.router.navigate(['Body']);
+    sessionStorage.setItem('Username',this.LoginForm.get('username').value);
+    this.messageService.add({key: 'success', severity:'success', summary: 'Success Message', detail:'Login Successful'});
+   
+    setTimeout(() => {
+      this.mys.isloggedin.next(true);
+      this.mys.isAuthenticated=true;
+      this.router.navigate(['contactus']);
+    }, 2000); 
     if(this.LoginForm.get('username').value != null && this.LoginForm.get('emaild').value !=null ){
       let user = new Login();
       user.UserName = this.LoginForm.get('username').value;
@@ -69,7 +76,7 @@ export class ReactiveformComponent implements OnInit {
           this.messageService.add({key: 'success', severity:'success', summary: 'Success Message', detail:'Login Successful'});
           this.mys.isAuthenticated = true;
           setTimeout(() => {
-            this.router.navigate(['Body']);
+            this.router.navigate(['contactus']);
           }, 2000); 
          
         }else{
@@ -92,7 +99,7 @@ export class ReactiveformComponent implements OnInit {
       //   document.getElementById("loader").style.display="block";
       //    this.mys.spinner();
       //   this.messageService.add({key: 'success', severity:'success', summary: 'Success Message', detail:'Login Successful'});
-      //   setTimeout(() => {this.router.navigate(['Body'])}, 4000);
+      //   setTimeout(() => {this.router.navigate(['contactus'])}, 4000);
       //   //;
       // }else{
       //   this.messageService.add({key: 'errors', severity:'error', summary: 'Authentication Error', detail:'User Not Found'});

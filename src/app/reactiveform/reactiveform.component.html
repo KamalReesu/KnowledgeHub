@@ -1,13 +1,14 @@
 <div style="width: 640px;">
-    <div class="modal-content" style="padding: 20px;">
+    <div class="modal-content" style="padding: 20px;border: 1px solid;
+    box-shadow: 0 0 2pc">
         <div class="modal-header" style="border-bottom: 0;">
-           <h3 class="modal-title" ><strong>Sign in...</strong> </h3>
+           <h3 class="modal-title" style="color:white" ><strong>Sign in...</strong> </h3>
            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
         </div>
         <div class="modal-body">
 <form [formGroup] = "LoginForm" >
   
-    <label style="color: white;">User Name : </label> 
+    <label style="color: slategray;">User Name : </label> 
     <input id="username"  type="text" class="form-control" formControlName = "username" required>
     <div class="danger" *ngIf="(LoginForm.controls.username.touched || LoginForm.controls.username.dirty) ">
     <div *ngIf="LoginForm.controls.username.hasError('required')">                
@@ -18,7 +19,7 @@
     </div>             
       </div>
       <br>
-    <label style="color: white;">Password: </label>
+    <label style="color: slategray;">Password: </label>
     <!-- <p-calendar formControlName="date" [showIcon]="true"></p-calendar> -->
     <input  type="password" class="form-control" formControlName = "emaild" name = "emaild">
     <p *ngIf="LoginForm.controls.emaild.errors" class="alert alert-danger">This field is required!</p>
@@ -45,7 +46,8 @@
           <input class="form-check-input" type="checkbox"> Remember me
         </label>
       </div> -->
-      <p (click)="routeTologin()" style="color: white; cursor: pointer; text-align: center; cursor: pointer;">New User? CreateanAccount</p>
+      <p (click)="routeTologin()" style="color: white; cursor: pointer; text-align: center; cursor: pointer;">New User? <span style="text-decoration: underline
+      ;">Create an Account</span></p>
       <br>
       <div style="display: flex; flex-direction: column; justify-content: center;">
         <button style="margin-bottom: 10px; " type="button" class="btn btn-success" (click)="onLogin($event)"   [disabled] = "!LoginForm.valid">Login</button>

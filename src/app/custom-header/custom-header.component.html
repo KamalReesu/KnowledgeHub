@@ -1,0 +1,17 @@
+<!-- <div  #summary *ngIf="params.filedName">
+  <div (mouseover)="openOverlaty($event,overlay)"> {{ params.displayName }} </div> 
+</div> -->
+  
+  <!-- <app-contact-us></app-contact-us> -->
+<!-- <p-overlayPanel #overlay>
+    <ng-template pTemplate>
+        <img src="assets/Images/trump.jpg" alt="Galleria 1" />
+    </ng-template>
+</p-overlayPanel> -->
+<div class="container">
+<button (click)="onTabclick(this)" class="accordion">What is 'use-strict' in Java Script</button>
+<div class="panel">
+  <p>In strict mode, any assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing variable, or a non-existing object, will throw an error.</p>
+  <div *ngFor="let f of params">{{ f}}</div>
+</div>
+</div>

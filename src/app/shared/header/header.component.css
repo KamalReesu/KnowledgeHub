@@ -1,0 +1,166 @@
+ h2 ,h1,h3{
+    color: white;
+ }
+ #boco{
+    color: white;
+ }
+ #date{
+    margin-left: auto;
+    color: white;
+ }
+ .borderw{
+    max-width: 600px;
+    align-content: center;
+    width: 550px;
+    max-height:400px;
+    height: 400px;
+    display: inline-block;
+    margin:0px;
+     border: 5px salmon;
+     border-right: solid;
+     background-color: white;
+     padding: 150px;
+     max-width: fit-content;
+ }
+ #div1:hover~#div2{
+    background-color: gray;
+ }
+
+ .bub{
+    opacity: 0.5;
+    color: yellow;
+ }
+
+ .bub:hover{
+    opacity: 1;
+ }
+ 
+ .card {
+    background: var(--surface-e);
+    padding: 2rem;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    border-radius: 4px;
+    margin-bottom: 2rem;
+ }
+ 
+ .notification .badge {
+    position: absolute;
+    top: -7px;
+    right: 15px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    background: white;
+    color: black;
+  }
+ 
+  .notification { 
+    position: relative;
+    display: flex;
+  }
+ 
+  .notification:hover{
+     cursor: pointer;
+  }
+
+  :host::ng-deep .useroverlay:hover{
+     background-color: black;
+  }
+
+  .log-out:hover{
+     background-color: lightslategray;
+  }
+
+  .nav-link .dropdown-item{
+   font-weight: 900;
+}
+
+/* .sidenav {
+   height: 100%;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: #111;
+   overflow-x: hidden;
+   transition: 0.5s;
+   padding-top: 60px;
+ } */
+ 
+ /* .sidenav a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #818181;
+   display: block;
+   transition: 0.3s;
+ }
+ 
+ .sidenav a:hover {
+   color: #f1f1f1;
+ }
+ 
+ .sidenav .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+ }
+ 
+ #main {
+   transition: margin-left .5s;
+   padding: 16px;
+ } */
+ 
+ /* @media screen and (max-height: 450px) {
+   .sidenav {padding-top: 15px;}
+   .sidenav a {font-size: 18px;}
+ } */
+
+ #mySidenav a {
+    margin-top: 200px;
+   position: absolute; /* Position them relative to the browser window */
+   right: -80px; /* Position them outside of the screen */
+   transition: 0.3s; /* Add transition on hover */
+   padding: 15px; /* 15px padding */
+   width: 100px; /* Set a specific width */
+   text-decoration: none; /* Remove underline */
+   font-size: 20px; /* Increase font size */
+   color: white; /* White text color */
+   border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+ }
+ 
+ #mySidenav a:hover {
+   right: 0; /* On mouse-over, make the elements appear as they should */
+ }
+ 
+ /* The about link: 20px from the top with a green background */
+ #about {
+   top: 20px;
+   background-color: #04AA6D;
+ }
+  
+
+ #blog {
+   top: 80px;
+   background-color: #2196F3; /* Blue */
+ }
+ 
+ #projects {
+   top: 140px;
+   background-color: #f44336; /* Red */
+ }
+ 
+ #contact {
+   top: 200px;
+   background-color: #555 /* Light Black */
+ }
+
+ .dropdown-item:hover{
+   color: transparent;
+ }
+ 
+
+
+  

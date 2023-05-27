@@ -1,0 +1,104 @@
+<div class="container" style="display: flex; flex-direction: column; align-items: center;">   
+<div class="container-fluid" style="display: flex;" >
+    <div style=" background-color: black; margin: auto; width: 100%; border-radius: 12px; padding: 34px; z-index: 1000;">
+      <app-content></app-content>
+      <div style="display: flex; color: white; font-weight: 800; z-index: 1000; justify-content: end;">
+        <button style=" margin-top: 20px; display: flex;" (click)="onProfileInfoEdit($event)" class="btn btn-dark" ><i class="material-icons">mode_edit</i>Edit Profile</button>
+       </div>
+        <form [formGroup]="coachregisterForm" class="form-horizontal">
+            <div class="row">
+              <div class="col">
+              <div class="form-group">
+                <label for="cname" style="color: white;">Name</label>
+                <div>
+                  <input type="text" class="form-control"  formControlName="cname" disabled>
+                  <div class="danger" *ngIf="(coachregisterForm.controls.cname.touched || coachregisterForm.controls.cname.dirty) ">
+                  <div *ngIf="coachregisterForm.controls.cname.hasError('required') || coachregisterForm.controls.cname.hasError('minlength') || coachregisterForm.controls.cname.hasError('maxlength')">                
+                    <strong class="text-danger">Name should have 3 to 50 characters</strong>  
+                    </div>
+                </div>
+                <!-- <p *ngIf="bookingForm.controls.passengerName.dirty || bookingForm.controls.passengerName.touched && bookingForm.controls.passengerName.errors" class="text-danger">This field is required!</p>  -->
+                </div>
+                
+              </div>
+              <div class="form-group">
+                <label for="address" style="color: white;">Address</label>
+                <div >
+                  <textarea class="form-control" formControlName="address" disabled></textarea>
+                  <!-- <div class="danger" *ngIf="((coachregisterForm.controls.address.touched || coachregisterForm.controls.address.dirty)) ">
+                      <div *ngIf="coachregisterForm.controls.dateOfBirth.hasError('required')">                
+                      <strong class="text-danger">Age should be between 20 and 100 years</strong>  
+                      </div>
+                  </div> -->
+                    <!-- <p *ngIf="bookingForm.controls.flightId.dirty || bookingForm.controls.flightId.touched && bookingForm.controls.flightId.errors?.emailInvalid" class="text-danger">{{bookingForm.controls.flightId.errors?.emailInvalid.message}}</p> -->
+                </div>
+              </div>
+              <!-- <div class="form-group">
+                <label for="mobileNumber" style="color: white;">Mobile Number</label>
+                <div>
+                  <input type="tel" class="form-control"  formControlName="mobileNumber">
+                  <div class="danger" *ngIf="(coachregisterForm.controls.mobileNumber.touched || coachregisterForm.controls.mobileNumber.dirty) ">
+                  <div *ngIf="coachregisterForm.controls.mobileNumber.hasError('required') || coachregisterForm.controls.mobileNumber.hasError('minlength')">                
+                    <strong class="text-danger">Mobile Number should have 10 digits</strong>  
+                    </div> 
+                    </div>
+                     <p *ngIf="bookingForm.controls.noOfTickets.dirty || bookingForm.controls.noOfTickets.touched && bookingForm.controls.noOfTickets.errors" class="text-danger">Enter the number of tickets greater than 0</p>  
+                </div>
+              </div> -->
+              </div>
+              <div class="col">
+              <div class="form-group">
+                <label for="emailaddress" style="color: white;">Email</label>
+                <div>
+                  <input type="emailaddress" class="form-control"  formControlName="emailaddress" disabled>
+                  <!-- <div class="danger" *ngIf="(coachregisterForm.controls.emailaddress.touched || coachregisterForm.controls.password.dirty) ">
+                  <div *ngIf="coachregisterForm.controls.emailaddress.hasError('required') || coachregisterForm.controls.emailaddress.hasError('minlength') || coachregisterForm.controls.emailaddress.hasError('maxlength')">                
+                    <strong class="text-danger">Password should have 5 to 10 characters</strong>  
+                    </div> 
+                    </div> -->
+                    <!-- <p *ngIf="bookingForm.controls.noOfTickets.dirty || bookingForm.controls.noOfTickets.touched && bookingForm.controls.noOfTickets.errors" class="text-danger">Enter the number of tickets greater than 0</p>  -->
+                </div>
+              </div>
+              <!-- <div class="form-group">
+                <label for="gender" style="color: white;">Gender</label>
+                <div>
+                <div class="form-check-inline">
+                  <label class="form-check-label" style="color: white;">
+                    <input type="radio" formControlName="gender" class="form-check-input" value="Male">Male
+                  </label>
+                </div>
+                <div class="form-check-inline">
+                  <label class="form-check-label" style="color: white;">
+                    <input type="radio" formControlName="gender"  class="form-check-input"value="Female" >Female
+                  </label>
+                </div>
+                </div>
+              </div> -->
+              <!-- <div class="form-group" style="margin-top: 2rem;">
+                <label for="speciality" style="color: white;">Speciality</label>
+                <div >
+                  <input type="text" class="form-control"  formControlName="speciality">
+                  <div class="danger" *ngIf="(coachregisterForm.controls.speciality.touched || coachregisterForm.controls.speciality.dirty) ">
+                  <div *ngIf="coachregisterForm.controls.speciality.hasError('required') || coachregisterForm.controls.speciality.hasError('minlength') || coachregisterForm.controls.speciality.hasError('maxlength')">                
+                    <strong class="text-danger">Specialty should have 10 to 50 characters</strong>  
+                    </div> 
+                    </div>
+                     <p *ngIf="bookingForm.controls.noOfTickets.dirty || bookingForm.controls.noOfTickets.touched && bookingForm.controls.noOfTickets.errors" class="text-danger">Enter the number of tickets greater than 0</p>  
+                </div>
+              </div> -->
+            </div>
+            </div>
+            <!-- <div *ngIf="!valid" class="error">Invalid Credentials...Please try again...[disabled]="!coachregisterForm.valid"</div> -->
+            <br />
+    
+            <div class="form-group">
+              <div style="display: flex; justify-content: flex-end;">
+                <button style="margin-right: 15px;" (click)="onRegister()" class="btn btn-success" >Save Changes</button>
+                <button style="display: inline;" class="btn btn-danger"(click)="onClose()" >Close</button>
+              </div>
+            </div>
+          </form>
+    </div>
+   
+   </div>
+</div>

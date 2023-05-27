@@ -1,0 +1,164 @@
+body{
+   font-family: monospace;
+   background-image: url(src/assets/Images/beach.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   cursor: pointer;
+   background-color: black;
+}
+h2 ,h1,h3{
+   color: white;
+}
+#boco{
+   color: white;
+}
+#date{
+   margin-left: auto;
+   color: white;
+}
+.borderw{
+   max-width: 600px;
+   align-content: center;
+   width: 550px;
+   max-height:400px;
+   height: 400px;
+   display: inline-block;
+   margin:0px;
+    border: 5px salmon;
+    border-right: solid;
+    background-color: white;
+    padding: 150px;
+    max-width: fit-content;
+}
+#div1:hover~#div2{
+   background-color: gray;
+}
+
+.card {
+   background: var(--surface-e);
+   padding: 2rem;
+   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+   border-radius: 4px;
+   margin-bottom: 2rem;
+}
+
+.notification .badge {
+   position: absolute;
+   top: -7px;
+   right: 3px;
+   padding: 2px 6px;
+   border-radius: 50%;
+   background: white;
+   color: black;
+ }
+
+ .notification { 
+   position: relative;
+   display: flex;
+ }
+
+ .notification:hover{
+    cursor: pointer;
+ }
+ .background .water {
+   background-image: url(src/assets/Images/sea.webp);
+   background-size: cover;
+   position: fixed;
+   background-repeat: repeat;
+   left: 0;
+   height: 899px;
+   width: 100%;
+ }
+ .train {
+   background-size: cover;
+   width: 959px;
+   height: 35px;
+   bottom: 60px;
+   animation: train 40s infinite;
+   animation-timing-function: linear;
+   animation-direction: normal;
+   background-image: url(src/assets/Images/htrain.webp);
+    height: 60px;
+    width: 1644px;
+    background-repeat: repeat;
+    position: absolute;
+    left: 0;
+    top: auto;
+
+    z-index: 1;
+}
+
+.tourism-view {
+   background-image: url(src/assets/Images/tourism-view.jpg);
+   
+   width: 100%;
+   background-repeat: repeat;
+   animation: bannerbg 120s infinite linear;
+   position: absolute;
+   background-size: 200% 150%;
+   left: 0;
+   top: 56px;
+   bottom: 30px;
+   z-index: 1;
+   animation-timing-function: linear;
+   animation-direction: reverse;
+}
+
+.view{
+   max-height: 500px;
+       
+       position: relative;
+       overflow: hidden;
+}
+
+
+@keyframes bannerbg {
+   0% { background-position: 0;}
+   100% { background-position: 1920px;}
+}
+
+@keyframes train {
+   0% { transform: translateX(-2000px);}
+   100% { transform: translateX(2000px);}
+}
+.cruise {
+   background-size: cover;
+   width: 130px;
+   animation: cruise 120s infinite;
+   background-image: url(src/assets/Images/cruise.webp);
+   height: 102px;
+   width: 339px;
+   background-repeat: repeat;
+   position: absolute;
+   left: 0;
+   
+   bottom: -30px;
+   z-index: 1;
+   animation-timing-function: linear;
+   animation-direction: normal;
+}
+
+@keyframes cruise {
+   0% { transform: translateX(0px);}
+   100% { transform: translateX(2000px);}
+}
+
+@keyframes flight {
+   0% { transform: translateX(0px);}
+   100% { transform: translateX(2000px);}
+}
+.flight{
+
+
+background-image: url(src/assets/Images/flight.webp);
+height: 48px;
+width: 160px;
+background-repeat: repeat;
+position: absolute;
+left: 0;
+top: 100px;
+z-index: 1;
+animation: flight 150s infinite;
+animation-timing-function: linear;
+animation-direction: normal;
+}

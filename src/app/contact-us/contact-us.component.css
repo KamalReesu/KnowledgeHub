@@ -1,0 +1,9 @@
+.blue1{
+    color: blue;
+}
+td{
+    font-weight: 700;
+}
+:host::ng-deep .ui-listbox{
+    width: 15em;
+}

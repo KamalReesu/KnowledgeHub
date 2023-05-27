@@ -1,0 +1,23 @@
+
+label{
+  color: white;
+}
+.modal-content{
+  background-color: black !important;
+  border: none;
+  border-radius: 0px;
+}
+/* .ng-valid[required]  {
+    border-left: 5px solid #42A948; 
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; 
+  } 
+  */
+
+  input[type="radio"]{
+    transform: scale(1.5);
+  }
+  
+  

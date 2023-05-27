@@ -1,0 +1,18 @@
+<div style="display: flex; justify-content: center;">
+<div *ngIf="signUpform">
+    <app-templateform ></app-templateform>
+</div>
+<div *ngIf="loginform">
+    <app-reactiveform (displaylogin)="loginform = false;signUpform=true"></app-reactiveform>
+</div>    
+    
+<!-- <p-tabView>
+     <p-tabPanel [style]="{'width':'500px'}" [headerStyle] = "{'background-color': 'none'}" orientation="left" header="Sign Up" leftIcon="pi pi-user-edit">
+        
+    </p-tabPanel> 
+    <p-tabPanel orientation="left"  [headerStyle] = "{'background-color': 'none'}" header="Log In" leftIcon="pi pi-user-edit">
+        
+    </p-tabPanel>
+</p-tabView> -->
+</div>
+

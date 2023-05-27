@@ -1,0 +1,68 @@
+/* @import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+
+.ag-theme-alpine {
+    @include ag-theme-alpine((
+        odd-row-background-color: #CFD8DC
+    ));
+}*/
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+;
+
+ body{
+    font-family: monospace;
+    // background-image: url(src/assets/Images/back.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-color: black;
+ }
+
+ #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+ .style1 body .ui-overlaypanel{
+    z-index: 1024;
+  }
+  .container{
+      margin-top: 100px;
+  }
+  #loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid lightcyan;
+    border-radius: 50%;
+    border-top: 16px solid black;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+
+  .w3-container{padding: 3.01em 600px; position: absolute;}
+
+// .w3-padding-64{padding-top:64px!important;}
+
+.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important;}
+
+.w3-xlarge{font-size:24px!important}.w3-xxlarge{font-size:36px!important}
+
+.w3-center{
+    text-align: center;
+}
+
+.w3-container::after, .w3-container::before{
+    content: "";
+    clear: both;
+    display: table;
+}

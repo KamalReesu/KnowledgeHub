@@ -1,0 +1,21 @@
+h4{
+    color: green;
+ }
+ /* .ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid rgb(147, 158, 147);
+  } */
+  
+  /* .ng-valid[required]  {
+   border-left: 5px solid #42A948; 
+ }
+ 
+ .ng-invalid:not(form)  {
+   border-left: 5px solid #a94442; 
+ } */
+ 
+ .modal-content{
+  background-color: black !important;
+  border: none;
+  border-radius: 0px;
+}
+ 

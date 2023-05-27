@@ -1,0 +1,73 @@
+<div class="container">
+    <a  href="#botom" style="float: right; margin-bottom: 20px;" >Bottom</a>
+    <label for="state" style="color: white;">Filter By:  </label>
+    <button style="margin-bottom: 8px; margin-left: 5px;" type="text" pButton label="State: {{selectedCities.name}}" (click)="op1.toggle($event)"></button>
+    <p-table [columns]="selectedColumns" [value]="Covdata" [scrollable]="true" scrollHeight="500px" [resizableColumns]="true">
+        <!-- <ng-template pTemplate="caption">
+            <div style="text-align:left">
+                <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header"
+                            selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
+            </div>
+        </ng-template> -->
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                    {{col.header}}
+                    <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+                </th>
+            </tr>
+        </ng-template>
+        <!-- <ng-template pTemplate="body"  let-car let-rowIndex="rowIndex" let-expanded="expanded" let-columns="columns">
+            <tr class="ui-widget-header" *ngIf="rowGroupMetadata[car.district].index === rowIndex">
+                <td colspan="3">
+                    <a href="#" [pRowToggler]="rowData">
+                        <i [ngClass]="expanded ? 'fa fa-fw fa-chevron-circle-down' : 'fa fa-fw fa-chevron-circle-right'"></i>
+                        <span>{{car.district}}</span>
+                    </a>
+                </td>
+            </tr>
+        </ng-template> -->
+        <ng-template pTemplate="body" let-car let-rowIndex="rowIndex">
+            <tr>
+                <td>{{ car.district}}  </td>
+                <td style="color: gray;">{{car.total.confirmed}}</td>
+                <td style="color: red;">{{car.total.deceased}}</td>
+                <td style="color: green;">{{car.total.recovered}}</td>
+                <td style="color: fuchsia;">{{car.total.tested}}</td>
+                <td style="color: blue;">{{car.total.vaccinated}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+    
+    <br>
+    <p-chart [style]="{'backgroud-color':'white'}" type="bar" [data]="data"></p-chart>
+    <br>
+    <br>
+    <a  href="#top" style="float: right; margin-bottom: 20px;" >Top</a>
+</div> 
+<p id="botom"></p>
+<p-overlayPanel #op1 appendTo="body" [autoZIndex]="false" >
+    <p-listbox [options]="cities" [style]="{'max-height':'400px','overflow': 'auto','width':'15em','cursor':'pointer'}" [(ngModel)]="selectedCities"  checkbox="true"  optionLabel="name"> </p-listbox>
+    <hr>
+    <div>
+        <a style="color:black; text-decoration: underline; cursor: pointer; line-height: 2.5;">clear</a>
+    <button type="text" label="Apply" pButton style="float: right;" (click)="getTabledata(); op1.hide();"></button>
+    </div>
+        
+    
+    
+</p-overlayPanel>
+
+<!-- <div class="modal" id="myModal4">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+           <strong>Alert</strong> 
+        </div>
+        <div class="modal-body">
+            you have successfully registered!!!
+        </div>
+    </div>
+    </div>
+
+</div> -->

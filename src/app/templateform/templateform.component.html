@@ -1,0 +1,63 @@
+
+<div style="width: 640px;">
+    <div class="modal-content" style="background-color: black; padding: 15px;">
+        <!-- <div class="modal-header" style="border-bottom: 0;">
+           <h3 style="margin: auto; color:green;" ><strong> Sign Up</strong></h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button> 
+        </div> -->
+        <div class="modal-body" >
+            <form #courseForm="ngForm" ngNativeValidate (ngSubmit) = "onSubmit(courseForm.value)">  
+              <div class="form-group">  
+                <label for="name">Name: </label>  
+                <input type="text" class="form-control" name="uname" required minlength="4" ngModel> 
+                <!-- <div *ngIf=" uname.invalid && uname.touched" class="text-danger">
+                  Name is required
+                </div> -->
+              </div>
+              <div class="form-group" >  
+                <label for="uemail">Email ID: </label>  
+                <input type="email"  class="form-control" name="uemail" required  ngModel>  
+                <!-- <div *ngIf=" mailid.invalid && mailid.touched " class="text-danger">
+                  Email ID is required
+                </div> -->
+                <!--pattern="(?=.*@)(?=.+.com)" <span class="alert alert-danger" *ngIf="alterEo.errors?.pattern && alterEo.touched">
+                  Email ID Must Contain @ and .com
+                </span> -->
+              </div>  
+              <div>    
+                <label for="gender">Gender: </label>
+                <br>
+                <div style="display: inline; margin-left: 10px;">
+                <input type="radio" name="gender" value="M" ngModel>
+                <label style="margin-left: 5px;" for="male">Male</label> 
+                <input style="margin-left: 15px;" type="radio" name="gender" value="F" ngModel>
+                <label style="margin-left: 5px;" for="female">Female</label>
+                </div> 
+              </div> 
+              <div class="form-group">  
+                <label for="upass">Password: </label>  
+                <input type="password" class="form-control" required name="upass"  ngModel>  
+                <!-- <div [hidden]=" pwd.valid || pwd.pristine" class="text-danger">
+                  Password is required
+                </div> -->
+              </div> 
+              <!-- <div class="form-group">  
+                <label for="ucont">Contact: </label>  
+                <input type="tel  " class="form-control" required name="ucont" [(ngModel)]="ucont"  #phone="ngModel">  
+              </div>  -->
+              <!-- <p (click)="routeTologin()" style="color: white; cursor: pointer;">Already Have an Account?</p>-->
+              <br/>
+              <div>
+                <button type="submit"  class="btn btn-success" style=" width:100%;"  [disabled]="!courseForm.valid" > Register </button>
+                <button type="button" style="margin-top: 20px; width: 100%;" (click)="courseForm.reset()" class="btn btn-danger">Reset</button>
+              </div> 
+                
+              <!-- <strong>
+                Name of the user: {{ courseForm.value | json }}
+              </strong> -->
+            </form>  
+        </div>
+    </div>
+</div>
+<p-toast position="top-right" [style]="{marginTop: '60px'}" key="success"></p-toast>
+<p-toast life="100000" position="top-right" [style]="{marginTop: '60px'}" key="errors"></p-toast>

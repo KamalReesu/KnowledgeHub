@@ -1,0 +1,70 @@
+<div style="width: 640px;">
+    <div class="modal-content" style="padding: 20px;">
+        <div class="modal-header" style="border-bottom: 0;">
+           <h3 class="modal-title" ><strong>Sign in...</strong> </h3>
+           <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+        </div>
+        <div class="modal-body">
+<form [formGroup] = "LoginForm" >
+  
+    <label style="color: white;">User Name : </label> 
+    <input id="username"  type="text" class="form-control" formControlName = "username" required>
+    <div class="danger" *ngIf="(LoginForm.controls.username.touched || LoginForm.controls.username.dirty) ">
+    <div *ngIf="LoginForm.controls.username.hasError('required')">                
+      <strong class="text-danger">username is mandatory.</strong>  
+    </div> 
+      <div *ngIf="LoginForm.controls.username.hasError('minlength')">                
+        <strong class="text-danger">The length of the value entered should be at least 10.</strong>
+    </div>             
+      </div>
+      <br>
+    <label style="color: white;">Password: </label>
+    <!-- <p-calendar formControlName="date" [showIcon]="true"></p-calendar> -->
+    <input  type="password" class="form-control" formControlName = "emaild" name = "emaild">
+    <p *ngIf="LoginForm.controls.emaild.errors" class="alert alert-danger">This field is required!</p>
+    <br>
+    
+    <!-- <strong>Country: </strong>
+    <p-dropdown [options]="cities2" [(ngModel)]="city" formControlName="city" optionLabel="name"></p-dropdown>
+    <br>
+
+    <button type="button" class="btn btn-primary" (click)="op1.toggle($event)"></button>
+    <p-overlayPanel #op1>
+      <p-tree [value]="files3"  selectionMode="checkbox" [(selection)]="selectedFiles2">
+        <ng-template let-node  pTemplate="default">
+          <input value="node.label" formControlName = "country" type="text" [disabled]="true">
+      </ng-template>
+      </p-tree>
+    <div>Selected Nodes: <span *ngFor="let file of selectedFiles2">{{file.label}}</span></div>
+    </p-overlayPanel> -->
+  
+      <!-- <br>
+      <input type="checkbox" > Remember Password -->
+      <!-- <div class="form-check">
+        <label class="form-check-label" style="color: white;">
+          <input class="form-check-input" type="checkbox"> Remember me
+        </label>
+      </div> -->
+      <p (click)="routeTologin()" style="color: white; cursor: pointer; text-align: center; cursor: pointer;">New User? CreateanAccount</p>
+      <br>
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <button style="margin-bottom: 10px; " type="button" class="btn btn-success" (click)="onLogin($event)"   [disabled] = "!LoginForm.valid">Login</button>
+        <!-- <button type="reset" class="btn btn-danger" (click)="LoginForm.reset()">Clear</button> -->
+      </div>
+      
+</form>
+<div>
+  <!-- <strong>
+    To Remove: Validation status
+    <p>Description field is valid : {{LoginForm.controls.username.valid}}</p>
+    {{ username }}
+    {{ password }}
+  </strong> -->
+
+</div>
+</div>
+</div>
+</div>
+<div style="display: none;" id="loader"></div>
+<p-toast position="top-right" [style]="{marginTop: '60px'}" key="success"></p-toast>
+<p-toast life="100000" position="top-right" [style]="{marginTop: '60px'}" key="errors"></p-toast>

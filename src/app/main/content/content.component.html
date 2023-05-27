@@ -1,0 +1,14 @@
+<div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="{{url}}" alt="Avatar" style="width:200px;height:200px;">
+      </div>
+      <div class="flip-card-back" >
+        <button style="border: none;background-color: lightgray; padding-left: 88px;padding-right: 88px;
+        outline: none;" (click)="onUpload($event)"><i class="material-icons">mode_edit</i></button>
+        <input (change)="onFileSelection($event)" id="fileUpload" type="file" style="display: none;"> 
+      </div>
+    </div>
+</div>
+<!-- <app-contact-us></app-contact-us> -->
+    

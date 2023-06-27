@@ -41,7 +41,7 @@ export class ViewprofileComponent implements OnInit {
   }
 
   onClose(){
-    this.router.navigate(['Body']);
+    this.router.navigate(['home']);
   }
 
   getUserDetails(){

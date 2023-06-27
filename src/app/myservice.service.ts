@@ -12,6 +12,7 @@ declare var $:any;
   providedIn: 'root'
 })
 export class MyserviceService {
+  openssl=`$env:NODE_OPTIONS="--openssl-legacy-provider`;
   url = 'http://localhost:54143/Api/Employee'; 
   private headers: HttpHeaders;
   public isAuthenticated:boolean;

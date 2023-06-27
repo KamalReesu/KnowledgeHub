@@ -9,11 +9,11 @@ import { MyserviceService } from './myservice.service';
 export class AuthguardGuard implements CanActivate {
   constructor(private serv:MyserviceService, private router: Router ) {};
   canActivate() {
-    if (!this.serv.isAuthenticated) {
-      this.router.navigate(['home']);
-      return false;
-    }
-    return true;
+    // if (!this.serv.isAuthenticated) {
+    //   this.router.navigate(['home']);
+    //   return false;
+    // }
+     return true;
     
 }
   

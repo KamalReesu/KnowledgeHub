@@ -32,6 +32,7 @@ import { ChartModule } from 'primeng/chart';
 import { ViewprofileComponent } from './viewprofile/viewprofile.component';
 import { HomeComponent } from './home/home.component';
 import { AuthinterceptorService } from './authinterceptor.service';
+import { AngularInfoModule } from './angular-info/angular-info.module';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { AuthinterceptorService } from './authinterceptor.service';
     ToastModule,
     MultiSelectModule,
     ChartModule,
+    AngularInfoModule,
     AgGridModule.withComponents([])
   ],
   providers: [ MyserviceService, AuthguardGuard, MessageService,{

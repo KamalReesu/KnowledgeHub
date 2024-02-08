@@ -1,7 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 //import { ILoadingOverlayComponentAngularComp } from '@ag-grid-community/angular';
-import { IHeaderGroupAngularComp } from 'ag-grid-angular';
 import {OverlayPanel} from 'primeng/overlaypanel';
 import { map } from 'rxjs/operators';
 import { MyserviceService } from '../myservice.service';

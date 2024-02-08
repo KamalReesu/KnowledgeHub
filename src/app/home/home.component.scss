@@ -40,3 +40,15 @@
     cursor: pointer; /* Add a pointer on hover */
   }
 
+  :host::ng-deep .btn-light {
+    background-color: transparent;
+    border-color: #f8f9fa;
+    color:white;
+  }
+
+
+  :host::ng-deep .btn-light:hover {
+
+    color:black;
+    background-color: white;
+  }

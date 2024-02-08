@@ -1,0 +1,24 @@
+.button-alignment{
+    display:flex ;
+     justify-content: space-between;
+}
+
+.btn-end{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-flex{
+    display: flex;
+}
+
+input[type="radio"]{
+    margin: 9px;
+    transform: scale(1.5);
+    vertical-align: middle;
+}
+input[type="checkbox"]{
+    margin: 9px;
+    transform: scale(1.5);
+    vertical-align: middle;
+}

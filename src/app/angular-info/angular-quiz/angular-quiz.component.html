@@ -1,0 +1,37 @@
+<div class="container">
+    <div  style="background-color:#17a2b8;padding: 10px;color: white;">
+        <strong>Question {{questionno}} of {{totalQuestions-1}}</strong>
+    </div>
+    <div style=" background-color:white;padding: 10px; padding: 50px;margin-top:10px; max-height: 500px; overflow-y: scroll;">
+        <ng-container *ngFor="let q of questions; let i =index;" [ngSwitch]="q.type" style="max-height: 250px; overflow-y:scroll;">
+            <ng-container *ngIf="questionno === i">
+            <p style="font-weight: 600;"><b>Question:{{questionno}}&nbsp;</b>{{q.question}}<i *ngIf="q.flag" style="vertical-align: middle; color: red;" class="material-icons">flag</i></p>      
+            <div *ngSwitchCase="'True-false'" style="margin-left: 10px;" ><p>
+                <input type="radio" name="question_{{i}}" value="True" /><label>True</label></p>
+                <p>
+
+                <input type="radio" name="question_{{i}}" value="False" /><label>False</label>
+            </p></div>
+            <div *ngSwitchCase="'Multiple choice'" style="margin-left: 10px;" >
+                <p *ngFor="let c of q.choices; let i=index;">
+                <input type="checkbox" value="{{c.choice}}" /><label>{{c.choice}}</label></p>
+                <p>
+            </div>
+            <div *ngSwitchCase="'Multiple correct'" style="margin-left: 10px;" >
+                <p *ngFor="let c of q.choices; let i=index;">
+                <input type="checkbox" value="{{c.choice}}" /><label>{{c.choice}}</label></p>
+                <p>
+            </div>
+            </ng-container>
+        </ng-container>
+        <br/>
+        <div [ngClass]="(questionno) > 1? 'button-alignment':''">
+            <button class="btn btn-info" *ngIf="questionno > 1" (click)="onBtnClick('previous',questionno)">Previous</button>
+            <div [ngClass]="questionno === 1? 'btn-end':'btn-flex'" >
+                <button  class="btn btn-warning" style="margin-right: 10px; color: white;" (click)="onBtnClick('review',questionno)">Mark for Review</button>
+                <button  *ngIf="questionno !== totalQuestions-1" class="btn btn-info" (click)="onBtnClick('next',questionno)">Next</button>
+                <button *ngIf="questionno === totalQuestions-1"  class="btn btn-success">Submit</button>
+            </div>  
+        </div>
+    </div>
+</div>

@@ -13,7 +13,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [{ path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
 {path:'contactus', component:ContactUsComponent},
-{path:'Main',component:ContentComponent,canActivate:[AuthguardGuard]},
+{path:'Main',component:ContentComponent},
 {path:'viewprofile',component:ViewprofileComponent},
 {path:'angularinfo',loadChildren: () => import('./angular-info/angular-info.module').then(m => m.AngularInfoModule)},
 {path: '', redirectTo: 'home', pathMatch:'full'}];

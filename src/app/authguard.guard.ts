@@ -10,11 +10,12 @@ export class AuthguardGuard implements CanActivate {
   constructor(private serv:MyserviceService, private router: Router ) {};
   canActivate() {
     // if (!this.serv.isAuthenticated) {
+    //   alert("Hello");
     //   this.router.navigate(['home']);
     //   return false;
     // }
-     return true;
-    
+    //  return true;
+    return true;
 }
   
 }

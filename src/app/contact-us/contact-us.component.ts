@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GridOptions } from 'ag-grid-community';
 import { isNullOrUndefined } from 'util';
 //import { Module } from 'ag-grid-community';
 import { CustomHeaderComponent } from '../custom-header/custom-header.component';
@@ -23,7 +22,7 @@ export class ContactUsComponent implements OnInit {
   public frameworkComponents;
   public rowModelType;
   public rowData=[{districts:'viskha'},{districts:'hyd'}];
-  public gridOptions:GridOptions;
+ // public gridOptions:GridOptions;
   public states:string[]=[];
   public statelabels:string[]=[];
 

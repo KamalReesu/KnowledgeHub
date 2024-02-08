@@ -8,17 +8,27 @@
 }*/
 // @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
+
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
  body{
     font-family: monospace;
-    // background-image: url(src/assets/Images/back.jpg);
+   //  background-image: url(src/assets/Images/nature.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-    background-color: #d7f0ed;
+     background-color: currentColor;
+   // animation: example 5s infinite ease-in;
  }
+//  @keyframes example {
+//   0%   {background-color: rgb(231, 102, 102);}
+//   25%  {background-color: rgb(245, 245, 132);}
+//   50%  {background-color: rgb(181, 181, 245);}
+//   100% {background-color: rgb(112, 221, 112);}
+// }
+
 
  #myVideo {
     position: fixed;

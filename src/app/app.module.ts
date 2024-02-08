@@ -13,7 +13,6 @@ import { TemplateformComponent } from './templateform/templateform.component';
 import { ObservdemoComponent } from './observdemo/observdemo.component';
 import { ContentComponent } from './main/content/content.component';
 import {TableModule} from 'primeng/table';
-import { AgGridModule } from 'ag-grid-angular';
 import {ListboxModule} from 'primeng/listbox';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { CustomHeaderComponent } from './custom-header/custom-header.component';
@@ -33,6 +32,8 @@ import { ViewprofileComponent } from './viewprofile/viewprofile.component';
 import { HomeComponent } from './home/home.component';
 import { AuthinterceptorService } from './authinterceptor.service';
 import { AngularInfoModule } from './angular-info/angular-info.module';
+import { AngularDashboardComponent } from './angular-info/angular-dashboard/angular-dashboard.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,6 @@ import { AngularInfoModule } from './angular-info/angular-info.module';
     ContentComponent,
     CustomHeaderComponent,
     LoginComponent,
-    HeaderComponent,
     ViewprofileComponent,
     HomeComponent
   ],
@@ -68,7 +68,7 @@ import { AngularInfoModule } from './angular-info/angular-info.module';
     MultiSelectModule,
     ChartModule,
     AngularInfoModule,
-    AgGridModule.withComponents([])
+    SharedModule
   ],
   providers: [ MyserviceService, AuthguardGuard, MessageService,{
     provide: HTTP_INTERCEPTORS,

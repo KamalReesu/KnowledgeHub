@@ -33,7 +33,11 @@ export class HeaderComponent implements OnInit,OnChanges {
     //this.op1.toggle(event.event);
   }
   onLogout(){
-    this.router.navigate(['/home']);
+    this.mys.isAuthenticated=false;
+    setTimeout(()=>{
+      this.router.navigate(['/home']);
+    },1000)
+    
     this.mys.isloggedin.next(false);
   }
 

@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { MyserviceService } from './myservice.service';
 import { Car } from './car';
 import { HttpClient } from '@angular/common/http';
-import { AgGridAngular } from 'ag-grid-angular';
 import { CustomHeaderComponent } from './custom-header/custom-header.component';
 import { MenuItem } from 'primeng/api';
 
@@ -25,7 +24,7 @@ export class AppComponent {
   @ViewChild('op1',{ read:null,static:true}) op1;
   @ViewChild('eid',{ read:null,static:true}) eid;
 
-  title:String = 'My-First-app';
+  title:String = 'knowledge-hub';
 
   tdate:any;
   cars:Car[];

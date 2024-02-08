@@ -7,20 +7,26 @@ import { MyserviceService } from '../myservice.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit,AfterViewInit {
 
   count:any;
   tdate: Date;
-  showRoutes:boolean;
+  showRoutes:boolean ;
 
   constructor(private ele:ElementRef,private mys:MyserviceService,private router:Router) { 
-    this.count=0;
+    //this.count=0;
+    
+  }
+  ngAfterViewInit(): void {
     
   }
   
   ngOnInit() {
+   // this.mys.spinner();
     setInterval(()=>{this.tdate=new Date()},550);
-    
+    // setTimeout(() => {
+    //   document.getElementById("loader").style.display="none";
+    // },4000 );
   }
   carousel(){
     let c=document.querySelectorAll(".mySlides");
@@ -40,14 +46,18 @@ export class HomeComponent implements OnInit {
     }
   }
   onLogin(type:string){
-    this.router.navigate(['login']);
-    if(type == "login"){
-      this.mys.formType.next("login");
-    }else{
-      this.mys.formType.next("signup");
-    }
-    this.showRoutes=true;  
     
+    if(type == "login"){
+      this.router.navigate(['login']);
+      this.mys.formType.next("login");
+    }else if(type == 'signup'){
+      this.router.navigate(['login']);
+      this.mys.formType.next("signup");
+    }else{
+      this.router.navigate(['contactus']);
+    }
+     this.showRoutes=true;  
+    sessionStorage.setItem('count',JSON.stringify(200))
   }
   topFunction() {
     document.body.scrollTop = 0;

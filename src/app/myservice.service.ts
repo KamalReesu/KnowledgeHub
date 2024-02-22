@@ -18,6 +18,8 @@ export class MyserviceService {
   public isAuthenticated:boolean;
 
   public isloggedin = new Subject<boolean>();
+  public fromProfile = new Subject<boolean>();
+
   public formType = new BehaviorSubject<string>("");
   constructor(private http:HttpClient) { 
     this.headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});

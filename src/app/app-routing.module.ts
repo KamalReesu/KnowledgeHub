@@ -8,15 +8,17 @@ import { AuthguardGuard } from './authguard.guard';
 import { ViewprofileComponent } from './viewprofile/viewprofile.component';
 import { CustomHeaderComponent } from './custom-header/custom-header.component';
 import { HomeComponent } from './home/home.component';
+import { AboutmeComponent } from './shared/aboutme/aboutme.component';
 
 
 const routes: Routes = [{ path: 'home', component: HomeComponent},
-  { path: 'login', component: LoginComponent},
+{path:'aboutme',component:AboutmeComponent},
+{ path: 'login', component: LoginComponent},
 {path:'contactus', component:ContactUsComponent},
-{path:'Main',component:ContentComponent},
+{path:'content',component:ContentComponent},
 {path:'viewprofile',component:ViewprofileComponent},
 {path:'angularinfo',loadChildren: () => import('./angular-info/angular-info.module').then(m => m.AngularInfoModule)},
-{path: '', redirectTo: 'home', pathMatch:'full'}];
+{path: '', redirectTo: 'aboutme', pathMatch:'full'}];
 //
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

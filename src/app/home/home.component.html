@@ -1,8 +1,8 @@
 <div class="main">
-<app-header></app-header>
+<div *ngIf="showProject" ><app-header></app-header></div>
 
 <!-- <div id="loader"></div> -->
-    <div *ngIf="!showRoutes"  class="container" style="margin-top: 200px;">   
+    <div *ngIf="showProject && !showRoutes"  class="container" style="margin-top: 200px;">   
       <br/>
       <!-- <marquee dir="rtl">
         <i style="color:white;font-size: 150px;" class="material-icons">clouds</i>
@@ -25,11 +25,21 @@
   </div>
   </div>
   
-  <div *ngIf="showRoutes" style="margin-top: 100px;">
+  <div *ngIf="!showProject || showRoutes" style="margin-top: 100px;">
     <!-- <div id="loader"></div> -->
     <div id="overlay"></div>
     <router-outlet></router-outlet>
   </div>
+  <div *ngIf="showProject" style="height: 200px;"></div>
+  <footer *ngIf="showProject" style="background-color: black; color: white; width: 100%;height: 250px;padding: 30px;"> 
+    <div style="display: flex;flex-direction:column; align-content: center;"><h3>ABOUT US</h3>
+   
+      <!-- <p style="border-bottom:4px solid white; color:white;"></p> -->
+    <article>
+    <p>Knowledge can function as an instrument for creating and destroying life on earth. We need the power of Knowledge to differentiate between humans and animals. We get the ability to help others with the help of knowledge, which helps us free ourselves. Everyone should gain knowledge to succeed in life.</p>
+  </article>  
+  </div>
+    <p style="margin:auto; font-size: 18px !important; ">Crafted & Powered by <a style="cursor: pointer;">Mad M<i style="color:yellow" class="material-icons">emoji_objects</i>nds</a></p>
+  </footer>
 
-  
 </div>

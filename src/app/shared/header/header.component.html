@@ -1,8 +1,9 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" style="background-color:black !important">
-      <a class="navbar-brand" href="#"><i class="material-icons bub"></i>Knowledge H<i class="material-icons bub">psychology</i>b </a>&nbsp;&nbsp;
-      <ul *ngIf="!showprofile" class="navbar-nav">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:black !important;color: white;">
+      <a class="navbar-brand" href="#"><i class="material-icons"></i>Knowledge H<i class="material-icons bub">find_in_page</i>b </a>&nbsp;&nbsp;
+      <div class="topnav" id="myTopnav">
+      <ul *ngIf="showprofile" class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">ABOUTUS</a>
+          <a class="nav-link" href="#">ABOUT US</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">FRONTEND</a>
@@ -11,7 +12,7 @@
             <a class="dropdown-item" href="#" >CSS</a>
             <a class="dropdown-item" href="#" >BOOTSTRAP</a>
             <a class="dropdown-item" href="#" routerLink="/angularinfo/dashboard" >ANGULAR</a>
-            <a class="dropdown-item" href="#" >JAVASCRIPT</a>
+            <a class="dropdown-item" href="#" >JAVA SCRIPT</a>
             <a class="dropdown-item" href="#">JQuery</a>
           </div>
         </li>
@@ -34,6 +35,11 @@
           </div>
         </li> 
       </ul>
+      <!-- <a href="javascript:void(0);" style="color:white;" class="icon" (click)="barClick()">
+        <i class="fa fa-bars"></i>
+      </a> -->
+      </div>
+
     <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item">
@@ -76,9 +82,8 @@
     </div>
     
   </p-overlayPanel>
-  <nav class="navbar navbar-expand-lg  fixed-bottom" style="background-color: black; color: white;">
-    <p style="margin:auto; font-size: 15px !important; ">Crafted & Powered by <a style="cursor: pointer;">Mad M<i class="material-icons bub">emoji_objects</i>nds</a></p>
-    <!-- <p id="date" > {{ tdate | date:'medium'}}</p> -->
-  </nav>
-
+  <!-- <nav class="navbar navbar-expand-lg  fixed-bottom" style="background-color: black; color: white;">
+    <p style="margin:auto; font-size: 18px !important; ">Crafted & Powered by <a style="cursor: pointer;">Mad M<i class="material-icons bub">emoji_objects</i>nds</a></p>
+    <p id="date" > {{ tdate | date:'medium'}}</p> 
+  </nav> -->
   

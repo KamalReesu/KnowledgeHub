@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit,AfterViewInit {
   count:any;
   tdate: Date;
   showRoutes:boolean ;
-
+  showProject:boolean;
   constructor(private ele:ElementRef,private mys:MyserviceService,private router:Router) { 
     //this.count=0;
     
@@ -23,6 +23,11 @@ export class HomeComponent implements OnInit,AfterViewInit {
   
   ngOnInit() {
    // this.mys.spinner();
+   this.mys.fromProfile.subscribe(e => {
+    console.log(e);
+    this.showProject =e;
+   })
+  //  this.showRoutes=true;
     setInterval(()=>{this.tdate=new Date()},550);
     // setTimeout(() => {
     //   document.getElementById("loader").style.display="none";
@@ -54,7 +59,10 @@ export class HomeComponent implements OnInit,AfterViewInit {
       this.router.navigate(['login']);
       this.mys.formType.next("signup");
     }else{
-      this.router.navigate(['contactus']);
+      this.router.navigate(['angularinfo/dashboard']);
+      // this.mys.formType.next("login");
+      sessionStorage.setItem('Username','Guest');
+      this.mys.isloggedin.next(true);
     }
      this.showRoutes=true;  
     sessionStorage.setItem('count',JSON.stringify(200))

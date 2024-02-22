@@ -166,11 +166,11 @@ searchEmployee(){
   
 }
 getdata(){
-  this.mYs.getAllEmployee().subscribe(
-    data =>{
-      this.rowData = data;
-    }
-  )
+  // this.mYs.getAllEmployee().subscribe(
+  //   data =>{
+  //     this.rowData = data;
+  //   }
+  // )
 }
 
 

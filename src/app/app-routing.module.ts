@@ -12,7 +12,7 @@ import { AboutmeComponent } from './shared/aboutme/aboutme.component';
 
 
 const routes: Routes = [{ path: 'home', component: HomeComponent},
-{path:'aboutme',component:AboutmeComponent},
+{path:'aboutme',component:AboutmeComponent },
 { path: 'login', component: LoginComponent},
 {path:'contactus', component:ContactUsComponent},
 {path:'content',component:ContentComponent},

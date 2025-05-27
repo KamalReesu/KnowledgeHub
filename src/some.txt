@@ -1,0 +1,95 @@
+ <!--HTML-->
+      <div class="card m-3">
+        <div class="card-img-top text-center ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="74px" height="74px" viewBox="0 0 32 32">
+          <title>file_type_html</title>
+          <polygon points="5.902 27.201 3.655 2 28.345 2 26.095 27.197 15.985 30 5.902 27.201" style="fill: #e44f26"/>
+          <polygon points="16 27.858 24.17 25.593 26.092 4.061 16 4.061 16 27.858" style="fill: #f1662a"/>
+          <polygon points="16 13.407 11.91 13.407 11.628 10.242 16 10.242 16 7.151 15.989 7.151 8.25 7.151 8.324 7.981 9.083 16.498 16 16.498 16 13.407" style="fill: #ebebeb"/>
+          <polygon points="16 21.434 15.986 21.438 12.544 20.509 12.324 18.044 10.651 18.044 9.221 18.044 9.654 22.896 15.986 24.654 16 24.65 16 21.434" style="fill: #ebebeb"/>
+          <polygon points="15.989 13.407 15.989 16.498 19.795 16.498 19.437 20.507 15.989 21.437 15.989 24.653 22.326 22.896 22.372 22.374 23.098 14.237 23.174 13.407 22.341 13.407 15.989 13.407" style="fill: #fff"/>
+          <polygon points="15.989 7.151 15.989 9.071 15.989 10.235 15.989 10.242 23.445 10.242 23.445 10.242 23.455 10.242 23.517 9.548 23.658 7.981 23.732 7.151 15.989 7.151" style="fill: #fff"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="card-title"><b>HTML</b></div>
+        <div>
+          Rating:
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span></div>
+      </div>
+      </div>
+        <!--css-->
+        <div class="card m-3">
+          <div class="card-img-top text-center ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="74px" height="74px" viewBox="0 0 32 32">
+          <title>file_type_css</title>
+          <polygon points="5.902 27.201 3.656 2 28.344 2 26.095 27.197 15.985 30 5.902 27.201" style="fill: #1572b6"/>
+          <polygon points="16 27.858 24.17 25.593 26.092 4.061 16 4.061 16 27.858" style="fill: #33a9dc"/>
+          <polygon points="16 13.191 20.09 13.191 20.372 10.026 16 10.026 16 6.935 16.011 6.935 23.75 6.935 23.676 7.764 22.917 16.282 16 16.282 16 13.191" style="fill: #fff"/>
+          <polygon points="16.019 21.218 16.005 21.222 12.563 20.292 12.343 17.827 10.67 17.827 9.24 17.827 9.673 22.68 16.004 24.438 16.019 24.434 16.019 21.218" style="fill: #ebebeb"/>
+          <polygon points="19.827 16.151 19.455 20.29 16.008 21.22 16.008 24.436 22.344 22.68 22.391 22.158 22.928 16.151 19.827 16.151" style="fill: #fff"/>
+          <polygon points="16.011 6.935 16.011 8.855 16.011 10.018 16.011 10.026 8.555 10.026 8.555 10.026 8.545 10.026 8.483 9.331 8.342 7.764 8.268 6.935 16.011 6.935" style="fill: #ebebeb"/>
+          <polygon points="16 13.191 16 15.111 16 16.274 16 16.282 12.611 16.282 12.611 16.282 12.601 16.282 12.539 15.587 12.399 14.02 12.325 13.191 16 13.191" style="fill: #ebebeb"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="card-title"><b>CSS</b></div>
+        <div>
+          Rating:
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span></div>
+      </div>
+      </div>
+        <!--Js-->
+        <div class="card m-3">
+          <div class="card-img-top text-center ">
+        <svg
+        width="74px"
+        height="74px"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g fill="none" fill-rule="evenodd">
+          <rect width="24" height="24" fill="#F1DC50" />
+          <path
+            stroke="#333"
+            stroke-width="2"
+            d="M12,11 C12,15.749205 12,18.4158717 12,19 C12,19.8761925 11.4771235,21 10,21 C7.61461794,21 7.5,19 7.5,19 M20.7899648,13.51604 C20.1898831,12.5053467 19.3944074,12 18.4035378,12 C16.8563489,12 16,13 16,14 C16,15 16.5,16 18.5084196,16.5 C19.7864643,16.8181718 21,17.5 21,19 C21,20.5 19.6845401,21 18.5,21 C16.9861609,21 15.9861609,20.3333333 15.5,19"
+          />
+        </g>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="card-title"><b>JavaScript</b></div>
+        <div>
+          Rating:
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span></div>
+      </div>
+      </div>
+        <!--Angular-->
+        <div class="card m-3">
+          <div class="card-img-top text-center ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="74px" height="74px" viewBox="0 0 32 32"  version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 114.4 122.88" style="enable-background:new 0 0 114.4 122.88" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#DD0031;} .st1{fill-rule:evenodd;clip-rule:evenodd;fill:#C3002F;} .st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}</style><g><polygon class="st0" points="57.2,0 57.2,0 57.2,0 0,20.4 8.72,96.03 57.2,122.88 57.2,122.88 57.2,122.88 105.68,96.03 114.4,20.4 57.2,0"/><polygon class="st1" points="57.2,0 57.2,13.64 57.2,13.58 57.2,75.82 57.2,75.82 57.2,122.88 57.2,122.88 105.68,96.03 114.4,20.4 57.2,0"/><path class="st2" d="M57.2,13.58L21.44,93.76l0,0h13.33l0,0l7.19-17.94h30.35l7.19,17.94l0,0h13.33l0,0L57.2,13.58L57.2,13.58 L57.2,13.58L57.2,13.58L57.2,13.58L57.2,13.58z M67.65,64.76H46.76L57.2,39.63L67.65,64.76L67.65,64.76z"/></g></svg> 
+      </div>
+      <div class="card-body">
+        <div class="card-title"><b>Angular</b></div>
+        <div>
+          Rating:
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span></div>
+      </div>
+      </div>

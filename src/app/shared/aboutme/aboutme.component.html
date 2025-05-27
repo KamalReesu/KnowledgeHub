@@ -1,62 +1,224 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top navbar-center">
+&nbsp;<nav class="navbar navbar-expand-sm bg-black navbar-dark fixed-top navbar-center">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img width="30" style="border-radius: 50%;"  src="/assets/Images/avatar.jpg">
+        <img width="30" style="border-radius: 50%;"  src="./assets/Images/avatar.jpg">
       </a>
-      <!-- <i class="material-icons">view_module</i> -->
-  <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="navbar-nav m-auto" style="padding: 10px;">
       <li class="nav-item">
-        <a class="nav-link" href="#">Profile</a>
+        <a class="nav-link" href="#"><i class="fa fa-user"></i>&nbsp;Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#academics">Academics</a>
+        <a class="nav-link" href="#academics"><i class="fa fa-graduation-cap"></i> Academics</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#achievements">Awards & Achievements</a>
+        <a class="nav-link" href="#awards"><i class="fa fa-diamond"></i> Achievements</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Skills</a>
+        <a class="nav-link" href="#skills"><i class="fa fa-gears"></i> Skills</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#projects"><i class="fa fa-space-shuttle"></i>  Projects</a>
       </li>
     </ul>
 </div>
 </div>
   </nav>
 <div class="container">
-        <div style="display: flex;justify-content: center;margin: 20px;">
-          <img width="250" style="border-radius: 50%;" class="shadow"   src="/assets/Images/avatar.jpg">
-        </div>
-        <p id="profile-tag" class="w-50 m-auto bg-white p-4"><b>A Software Enthusiast who always strives to develop user interfaces close to human imagination.</b></p> 
-        <br/>
-        <br/>
-      <div id="academics" class="m-auto p-3 w-75 bg-info text-white rounded borders">
-        <h1>Academics</h1> 
-        <ul>
-          <li>
-            BTech in Electronics & Comm Engg 
-            Raghu Institute of Technology at Viskahapatnam |
-             August 2013 - July 2017
-             Higher Secondary Certification </li>
-             <br/>
-          <li>  Sri Chaitanya Junior College at Visakhapatnam |
-             June 2011 - June 2013
-             Secondary School Certification </li>
-             <br/>
-            <li>Prathibha Public School at Visakhapatnam | June
-             2010 - May 2011</li>
-          </ul>
+  <!-- <nav class="fixed-top">
+    <div style="display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 10px;">
+      <span style="color: white;">Try Dark Mode &nbsp;</span>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
       </div>
-      <br/>
-      <div id="projects" class="m-auto p-3 w-75 bg-info text-white rounded borders">
-        <h1>Projects</h1> 
-          <a routerLink="/home" (click)="showProjects()">Knowledge Hub</a>
+  </nav> -->
+  <div class="row">
+    <div class="col-12 m-2" style="display: flex; justify-content:center; flex-flow: row wrap;">
+      <!-- <button id="nav-btn" class="btn m-2"  style="border-radius: 20px; border:1px solid" ><a style="text-decoration: none; color: black;" href="#aboutme">About Me</a></button>
+      <button id="nav-btn" class="btn m-2" style="border-radius: 20px;border:1px solid;"><a style="text-decoration: none;color: black;" href="#aboutme">Academics</a></button>
+      <button id="nav-btn" class="btn m-2 " style="border-radius: 20px;border:1px solid;" ><a style="text-decoration: none;color: black;" href="#skills">Experience</a></button> -->
+      <!-- <ng-container *ngFor="let btn of navBtns; let i = index;">
+        <button #navbtnref id="nav-btn" class="btn m-2" (click)="onNavBtnClick(i)"
+          [ngClass]="btn.active == true ? 'higlight-btn' : ''" style="border-radius: 20px;border:1px solid;"><a
+            [ngStyle]="{'color': btn.active == true ? 'white':'black'}"
+            href="#{{btn.btnType | lowercase }}">{{btn?.btnType}}</a></button>
+      </ng-container> -->
+        <!-- Rounded switch -->
+    </div>
+    <div class="col-12" style="display: flex;flex-direction:column;align-items:center;position: relative;" class="m-auto my-4 p-4">
+      <!-- <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a> -->
+      <img (click)="op3.toggle($event)" (mouseleave)="op3.hide()" width="250" style="border-radius: 50%;"
+        class="shadow" src="./assets/Images/avatar.jpg">
+      <br />
+      <!-- <p-overlayPanel #op3 appendTo="body" [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"
+      [style]="{'top':'120px'}">
+      <span style="font-size: large;font-weight: 800;">Hello! How are you doing ?</span>
+    </p-overlayPanel> -->
+      <!-- <p id="profile-tag" class="w-75 m-auto p-4 br-5 bg-white"><b>A Software Enthusiast who always strives to develop user interfaces close to human imagination.</b></p>  -->
+    </div>
+    <!--about me-->
+    <div class="col-12 my-4" id="aboutme">
+      <div class="p-3 w-100  rounded borders">
+        <div class="headings">
+          <p class="text-black" style="    font-family: 'Open Sans';
+                font-weight: 500; font-size: 18px;">Myself <b>Kamal </b>hailing from <b>south-east</b> India, a dynamic
+            individual with a passion for exploration. <br /><br /> Holding a Bachelor's degree in the field of <b>"
+              Electronics & Communication Engineering "</b>, Currently excelling career as a <b>" Front-End Developer
+              "</b>, working proficiency in various domains of software development. <br /><br /> Beyond coding, I find
+            joy in exploring the world. My passion for travel has no bounds, driving me to immerse in new cultures,
+            landscapes, and experiences.Whether I’m navigating busy city streets or finding tranquility in nature, my adventurous spirit fuels my creativity and broadens my perspective.</p>
         </div>
-     <!-- <svg viewBox="0 0 2 2" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-k200y r-18jsvk2 r-5sfk15 r-kzbkwu"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg> -->
-</div>
+      </div>
+    </div>
+    <br />
+    <!--Education-->
+    <div class="col-lg-6 my-4" id="academics">
+      <div class="headings">
+        <h1>A</h1>
+        <h3>cademics</h3>
+      </div>
+      <hr />
+      <div class="m-auto p-3 text-white rounded borders">
+        <div class=" p-2 flex-row" style="flex-direction: column;display: flex; align-items: center;">
+          <p class="p-4 m-3" style="    background-color: black;
+    color: white;"><b>2017</b></p>
+          <div style="color: black;
+              font-weight: 600; ">
+            BTech in Electronics & Comm Engg
+            <br />
+            Raghu Institute of Technology
+            <br />
+            August 2013 - July 2017
+          </div>
+        </div>
+        <br />
+        <div class=" p-2 flex-row" style="flex-direction: column;display: flex; align-items: center;">
+          <p class="p-4 m-3" style="    background-color: black;
+    color: white;"><b>2013</b></p>
+          <div style="color: black;
+              font-weight: 600; ">
+            Higher Secondary Certification
+            <br />
+            Sri Chaitanya Junior College
+            <br />
+            June 2011 - June 2013
+          </div>
+        </div>
+        <br />
+        <div class=" p-2 flex-row" style="flex-direction: column;display: flex; align-items: center;">
+          <p class="p-4 m-3" style="    background-color: black;
+    color: white;"><b>2011</b></p>
+          <div style="color: black;
+              font-weight: 600; ">
+            Secondary School Certification
+            <br />
+            Prathibha Public School
+            <br />
+            June 2010 - May 2011
+          </div>
+        </div>
+        <!-- <iframe src="./assets/academic.html" name="targetframe" allowTransparency="true" frameborder="0" >
+            </iframe> -->
+      </div>
+    </div>
+    <br />
+    <!--skills-->
+    <div class="col-lg-6 my-4" id="skills">
+      <div class="headings">
+        <h1>S</h1>
+        <h3>kills</h3>
+      </div>
+      <hr />
+      <div class="m-auto p-3 display-flex  rounded skill-block borders">
+        <button class="btn m-2" style="border-radius: 20px; background-color: #e00000; color:white;">Angular</button>
+        <button class="btn m-2 " style="border-radius: 20px;background-color: orangered; color:white">HTML</button>
+        <button class="btn m-2 btn-primary" style="border-radius: 20px;">CSS</button>
+        <button class="btn m-2" style="border-radius: 20px;background-color: #ffd622;">JavaScript</button>
+        <button class="btn m-2" style="border-radius: 20px;background-color:orange;color:white">MS SQL SERVER</button>
+        <button class="btn btn-info m-2" style="border-radius: 20px;">Type Script</button>
+
+        <button class="btn m-2" style="border-radius: 20px;background-color: blue;color: white;">C#</button>
+
+      </div>
+    </div>
+    <br />
+    <!--projects-->
+    <div class="col-lg-6 my-4" id="projects">
+      <div class="headings">
+        <h1>P</h1>
+        <h3>rojects</h3>
+      </div>
+      <hr />
+      <div class="m-auto p-3 w-75  text-white rounded borders">
+        <div class="card m-3" style="    background-color: cadetblue;
+      box-shadow: 0px 0px 1px;
+          font-family: system-ui;;">
+          <div class="card-img-top text-center ">
+            <img src=".\assets\Images\khub.PNG" width="300" style="width: 100%;height: 200px;" alt="logo">
+          </div>
+          <div class="card-body">
+            <div class="card-title" style="color: black;">
+              <h3>Knowledge Hub</h3>
+            </div>
+            <p style="color:black">Knowledge hub is a central repository of all the information which were collected
+              from the different sources</p>
+            <a style="color: white; background-color: black;padding: 6px;" routerLink="/home"
+              (click)="showProjects()">Click Here...</a>
+          </div>
+        </div>
+        <br />
+      </div>
+      </div>
+       <!--awards-->
+       <div class="col-lg-6 my-4">
+        <div ID="awards" class="headings">
+          <h1>A</h1>
+          <h3>wards</h3>&nbsp;&&nbsp; <h1>A</h1>
+          <h3>chievements</h3>
+        </div>
+        <hr />
+        <div class="m-auto p-3 w-75  rounded borders">
+          <ul style="padding-inline-start:0px">
+            <li>
+              Awarded as <b>Rookie of the Quarter in [Jul-2021] </b></li>
+            <li>
+              Awarded as <b>Performer of the Quarter in [Dec-2023]</b> </li>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <br />
+      <!--github-->
+      <div class="col-lg-12 my-4">
+        <hr />
+      <span>Have Something to Discuss? Let's connect </span>
+      <br />
+      <br />
+      <div style="display: flex;flex-direction: row;justify-content: space-evenly;;">
+        <a href="https://twitter.com/kamal_r_offl?lang=en" target="_blank"><img width="40"
+            src="./assets/Images/twitter.png"></a>
+        <a href="https://github.com/KamalReesu" target="_blank"><img style="background-color: white;border-radius: 50%;"
+            width="40" src="./assets/Images/github.png"></a>
+        <a href="https://www.linkedin.com/in/kamal-reesu-aa3a6320a/" target="_blank"><img width="40"
+            src="./assets/Images/linkedin.png"></a>
+      </div>
+      </div>
+      <br />
+
+    <button (click)="scrollToTop()" id="scrollToTopBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+ 
+
+    <!-- <iframe [src]="mapUrl"  width="100%"
+    height="100%"
+    frameborder="0"
+    allowfullscreen></iframe> -->
